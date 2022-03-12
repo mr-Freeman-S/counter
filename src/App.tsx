@@ -14,9 +14,11 @@ function App() {
         setCounterValue(0)
     }
 
+
+
     return (
         <div className="App">
-            <Counter increment={increment} reset={reset} valueCounter={counterValue}/>
+            <Counter setCounterValue={setCounterValue} increment={increment} reset={reset} valueCounter={counterValue}/>
         </div>
     );
 }

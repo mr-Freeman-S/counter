@@ -32,14 +32,7 @@ const ButtonGroup = (props: ButtonGroupPropsType) => {
                 <SuperButton className={s.buttonStyle} disabled={props.valueCounter > 4} callback={props.increment}
                              name='INC'/>
                 <SuperButton className={s.buttonStyle} disabled={!props.valueCounter} callback={props.reset} name='RESET'/>
-                <SuperButton className={s.buttonStyle} disabled={false} callback={addToLocalStorage}
-                             name='addToLocalStorage'/>
-                <SuperButton className={s.buttonStyle} disabled={false} callback={getToLocalStorage}
-                             name='getToLocalStorage'/>
-                <SuperButton className={s.buttonStyle} disabled={false} callback={clearToLocalStorage}
-                             name='clearToLocalStorage'/>
-                <SuperButton className={s.buttonStyle} disabled={false} callback={deleteToLocalStorage}
-                             name='deleteToLocalStorage'/>
+
             </div>
         );
     }

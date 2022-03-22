@@ -1,43 +1,54 @@
 .red {
-    color:red;
+    color: red;
 }
+
 .counter {
-    margin: auto auto;
+    display: grid;
+    margin-top: 200px ;
     width: 400px;
-    border: 2px solid chartreuse;
-    background-color: gray;
+    border: 2px solid #282828;
+    background-color: #969696;
     padding: 2em;
     border-radius: 10px;
+    grid-gap: 10px;
+
 }
-.scoreboard{
-    background-color: burlywood;
+
+.scoreboard {
+    justify-items: stretch;
+    background-color: #00897b;
     font-size: 100px;
-    border: 2px solid chartreuse;
+    border: 2px solid #282828;
     border-radius: 10px;
+    text-align: center;
+    color: #363636;
 }
 
 .buttonStyle {
-    width: 120px;
-    height: 40px;
-    background-color: bisque;
-    border: 2px solid blueviolet;;
+    justify-self: stretch;
+
+    background-color: #00897b;
+    border: 2px solid #282828;;
     font-size: 20px;
     margin: 10px;
     border-radius: 10px;
     transition: 0.4s;
+    color: #363636;
 }
-.buttonStyle:disabled{
+
+.buttonStyle:disabled {
     opacity: 0.2;
 }
-.buttonStyle:hover{
-    color: gray;
-    background-color: chartreuse;
+
+.buttonStyle:hover {
+    color: #363636;
+    background-color: #00564d;
 }
 
 
 .buttonGropeStyle {
-    padding: 20px;
-    border: 2px solid chartreuse;
-    margin: 20px;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid #49416D;
     border-radius: 10px;
 }

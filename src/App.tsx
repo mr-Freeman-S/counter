@@ -17,7 +17,6 @@ function App() {
     return (
         <div className="App">
             <Counter increment={increment} reset={reset} valueCounter={counterValue}/>
-            <Counter increment={increment} reset={reset} valueCounter={counterValue}/>
         </div>
     );
 }

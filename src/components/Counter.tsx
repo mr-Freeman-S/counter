@@ -8,13 +8,14 @@ type CounterPropsType = {
     increment: () => void
     reset: () => void
     valueCounter: number
+    setCounterValue:(n:number)=>void
 }
 
 const Counter = (props: CounterPropsType) => {
     return (
         <div className={s.counter}>
             <Scoreboard counter={props.valueCounter}/>
-            <ButtonGroup valueCounter={props.valueCounter} increment={props.increment} reset={props.reset}/>
+            <ButtonGroup setCounterValue={props.setCounterValue} valueCounter={props.valueCounter} increment={props.increment} reset={props.reset}/>
         </div>
     );
 };

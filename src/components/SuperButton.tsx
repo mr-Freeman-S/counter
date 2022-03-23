@@ -15,7 +15,7 @@ const SuperButton = (props:SuperButtonPropsType) => {
     const finalClassName:string = `${props.className && props.className}`
 
     return (
-        <button className={finalClassName}  disabled={props.disabled} onClick={props.callback}>
+        <button className={finalClassName}  disabled={props.disabled}  onClick={props.callback}>
             {props.name}
         </button>
     );

@@ -1,6 +1,4 @@
-.red {
-    color: red;
-}
+
 
 .counter {
     display: grid;
@@ -15,6 +13,7 @@
 }
 
 .scoreboard {
+    height: 150px;
     justify-items: stretch;
     background-color: #00897b;
     font-size: 100px;
@@ -26,7 +25,7 @@
 
 .buttonStyle {
     justify-self: stretch;
-
+    height: 50px;
     background-color: #00897b;
     border: 2px solid #282828;;
     font-size: 20px;
@@ -47,8 +46,28 @@
 
 
 .buttonGropeStyle {
+    height: auto;
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
     border: 2px solid #49416D;
     border-radius: 10px;
+}
+.inp {
+    justify-content: end;
+    background-color: #969696 ;
+    border: 2px solid #49416D;
+    border-radius: 10px;
+}
+.scoreError{
+    height: 150px;
+    background-color: #00897b;
+    font-size: 30px;
+    border: 2px solid #282828;
+    border-radius: 10px;
+    text-align: center;
+    color: #363636;
+
+}
+.red {
+    color: red;
 }

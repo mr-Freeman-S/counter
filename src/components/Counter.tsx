@@ -1,21 +1,31 @@
-import React from 'react';
-import Scoreboard from "./Scoreboard";
+import React, {useEffect} from 'react';
 import ButtonGroup from "./ButtonGroup";
 import s from './counter.module.css'
+import SuperButton from "./SuperButton";
 
 
 type CounterPropsType = {
     increment: () => void
     reset: () => void
     valueCounter: number
-    setCounterValue:(n:number)=>void
+    setCounterValue: (n: number) => void
+    rendered: boolean
+    minMaxValue: number[]
 }
 
 const Counter = (props: CounterPropsType) => {
+    let maxValue = props.valueCounter === props.minMaxValue[1]
+    let finalClassName = maxValue ? `${s.scoreboard} ${s.red}` : s.scoreboard
+
     return (
         <div className={s.counter}>
-            <Scoreboard counter={props.valueCounter}/>
-            <ButtonGroup setCounterValue={props.setCounterValue} valueCounter={props.valueCounter} increment={props.increment} reset={props.reset}/>
+            {props.rendered ?
+                <div className={s.scoreError}>enter values and press "SET"</div>
+                : <div className={finalClassName}>{props.valueCounter}</div>}
+            <div className={s.buttonGropeStyle}>
+                <SuperButton disabled={maxValue} callback={props.increment} className={s.buttonStyle} name={'INC'}/>
+                <SuperButton callback={props.reset} className={s.buttonStyle} name={'RESET'}/>
+            </div>
         </div>
     );
 };
